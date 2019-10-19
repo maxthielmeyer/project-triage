@@ -12,12 +12,8 @@ var patientTriageApp = new Vue({
           "Content-Type": "application/json; charset=utf-8"
         }
       })
-      .then( response => response.json() )
-      .then( json => { waitingApp.patients = json})
-      .catch( err => {
-        console.error('WORK TRIAGE ERROR:');
-        console.error(err);
-      })
+      .then(response => response.json())
+      .then(json => { waitingApp.patients = json })
 
       this.handleReset();
     },
